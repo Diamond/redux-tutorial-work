@@ -46,7 +46,7 @@
 
 	'use strict';
 
-	var _ = __webpack_require__(15);
+	var _ = __webpack_require__(16);
 
 	var _2 = _interopRequireDefault(_);
 
@@ -56,8 +56,7 @@
 
 /***/ },
 /* 1 */,
-/* 2 */,
-/* 3 */
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -65,27 +64,27 @@
 	exports.__esModule = true;
 	exports.compose = exports.applyMiddleware = exports.bindActionCreators = exports.combineReducers = exports.createStore = undefined;
 
-	var _createStore = __webpack_require__(5);
+	var _createStore = __webpack_require__(4);
 
 	var _createStore2 = _interopRequireDefault(_createStore);
 
-	var _combineReducers = __webpack_require__(9);
+	var _combineReducers = __webpack_require__(8);
 
 	var _combineReducers2 = _interopRequireDefault(_combineReducers);
 
-	var _bindActionCreators = __webpack_require__(11);
+	var _bindActionCreators = __webpack_require__(10);
 
 	var _bindActionCreators2 = _interopRequireDefault(_bindActionCreators);
 
-	var _applyMiddleware = __webpack_require__(12);
+	var _applyMiddleware = __webpack_require__(11);
 
 	var _applyMiddleware2 = _interopRequireDefault(_applyMiddleware);
 
-	var _compose = __webpack_require__(13);
+	var _compose = __webpack_require__(12);
 
 	var _compose2 = _interopRequireDefault(_compose);
 
-	var _warning = __webpack_require__(10);
+	var _warning = __webpack_require__(9);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -106,10 +105,10 @@
 	exports.bindActionCreators = _bindActionCreators2["default"];
 	exports.applyMiddleware = _applyMiddleware2["default"];
 	exports.compose = _compose2["default"];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 4 */
+/* 3 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -206,7 +205,7 @@
 
 
 /***/ },
-/* 5 */
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -215,7 +214,7 @@
 	exports.ActionTypes = undefined;
 	exports["default"] = createStore;
 
-	var _isPlainObject = __webpack_require__(6);
+	var _isPlainObject = __webpack_require__(5);
 
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
@@ -427,11 +426,11 @@
 	}
 
 /***/ },
-/* 6 */
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isHostObject = __webpack_require__(7),
-	    isObjectLike = __webpack_require__(8);
+	var isHostObject = __webpack_require__(6),
+	    isObjectLike = __webpack_require__(7);
 
 	/** `Object#toString` result references. */
 	var objectTag = '[object Object]';
@@ -502,7 +501,7 @@
 
 
 /***/ },
-/* 7 */
+/* 6 */
 /***/ function(module, exports) {
 
 	/**
@@ -528,7 +527,7 @@
 
 
 /***/ },
-/* 8 */
+/* 7 */
 /***/ function(module, exports) {
 
 	/**
@@ -562,7 +561,7 @@
 
 
 /***/ },
-/* 9 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -570,13 +569,13 @@
 	exports.__esModule = true;
 	exports["default"] = combineReducers;
 
-	var _createStore = __webpack_require__(5);
+	var _createStore = __webpack_require__(4);
 
-	var _isPlainObject = __webpack_require__(6);
+	var _isPlainObject = __webpack_require__(5);
 
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _warning = __webpack_require__(10);
+	var _warning = __webpack_require__(9);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -692,10 +691,10 @@
 	    return hasChanged ? nextState : state;
 	  };
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 10 */
+/* 9 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -724,7 +723,7 @@
 	}
 
 /***/ },
-/* 11 */
+/* 10 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -780,7 +779,7 @@
 	}
 
 /***/ },
-/* 12 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -790,7 +789,7 @@
 	exports.__esModule = true;
 	exports["default"] = applyMiddleware;
 
-	var _compose = __webpack_require__(13);
+	var _compose = __webpack_require__(12);
 
 	var _compose2 = _interopRequireDefault(_compose);
 
@@ -842,7 +841,7 @@
 	}
 
 /***/ },
-/* 13 */
+/* 12 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -876,8 +875,10 @@
 	}
 
 /***/ },
+/* 13 */,
 /* 14 */,
-/* 15 */
+/* 15 */,
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -887,50 +888,61 @@
 	});
 	exports.default = app;
 
-	var _redux = __webpack_require__(3);
+	var _redux = __webpack_require__(2);
 
-	var reducer0 = function reducer0(state, action) {
-	  console.log('reducer0 was called with state', state, 'and action', action);
+	var thunkMiddleware = function thunkMiddleware(_ref) {
+	  var dispatch = _ref.dispatch;
+	  var getState = _ref.getState;
+	  return function (next) {
+	    return function (action) {
+	      return typeof action === 'function' ? action(dispatch, getState) : next(action);
+	    };
+	  };
 	};
-	var store0 = (0, _redux.createStore)(reducer0);
 
-	var reducer1 = function reducer1(state, action) {
-	  console.log("reducer1 was called with state", state, "and action", action);
-	  if (typeof state === 'undefined') {
-	    return {};
+	var finalCreateStore = (0, _redux.applyMiddleware)(thunkMiddleware)(_redux.createStore);
+
+	var reducer = (0, _redux.combineReducers)({
+	  speaker: function speaker() {
+	    var state = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	    var action = arguments[1];
+
+	    switch (action.type) {
+	      case 'SAY':
+	        return Object.assign({}, state, { message: action.message });
+	      default:
+	        return state;
+	    }
 	  }
-	  return state;
+	});
+
+	var store = finalCreateStore(reducer);
+
+	var sayActionCreator = function sayActionCreator(message) {
+	  return {
+	    type: 'SAY',
+	    message: message
+	  };
 	};
-	var store1 = (0, _redux.createStore)(reducer1);
 
-	var reducer2 = function reducer2() {
-	  var state = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-	  var action = arguments[1];
-
-	  console.log('reducer2 was called with state', state, 'and action', action);
-	  return state;
+	var asyncSayActionCreator = function asyncSayActionCreator(message) {
+	  return function (dispatch) {
+	    setTimeout(function () {
+	      dispatch({
+	        type: 'SAY',
+	        message: message
+	      });
+	      console.log(new Date());
+	      console.log('store state after action SAY', store.getState());
+	    }, 2000);
+	  };
 	};
-	var store2 = (0, _redux.createStore)(reducer2);
-
-	var reducer3 = function reducer3() {
-	  var state = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-	  var action = arguments[1];
-
-	  console.log('reducer3 was called with state', state, 'and action', action);
-	  switch (action.type) {
-	    case 'SAY_SOMETHING':
-	      return Object.assign({}, state, { message: action.value });
-	    default:
-	      return state;
-	  }
-	};
-	var store3 = (0, _redux.createStore)(reducer3);
 
 	function app() {
-	  console.log('store0 state after initialization', store0.getState());
-	  console.log('store1 state after initialization', store1.getState());
-	  console.log('store2 state after initialization', store2.getState());
-	  console.log('store3 state after initialization', store3.getState());
+	  store.dispatch(sayActionCreator('Hi'));
+	  console.log(new Date());
+	  console.log('store state after action SAY', store.getState());
+	  store.dispatch(asyncSayActionCreator("dog"));
 	};
 
 /***/ }
